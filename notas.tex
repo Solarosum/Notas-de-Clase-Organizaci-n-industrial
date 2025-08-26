@@ -1,0 +1,279 @@
+
+%Tipo de documento
+\documentclass[letterpaper,12pt,twocolumn]{report}
+
+%Margenes
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+
+%Paquetes variados
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{theorem}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{fancyvrb}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{tabularray}
+
+%Capitulos elegantes
+\usepackage[Rejne]{fncychap}
+
+%Datos 
+\title{Notas de Clase: Organización industrial}
+\author{Fabián Méndez Martinez}
+\date{Agosto 2024 - Enero 2025}
+%Comandos
+\renewcommand{\baselinestretch}{1.3}
+
+%Documento
+\begin{document}
+
+%Presentación
+\maketitle
+\tableofcontents
+
+%Contenido
+
+\chapter{Organización industrial}
+
+
+%Datos de la materia 
+\begin{tcolorbox}[title=\large Información de la EE]
+    \begin{itemize}
+        \item Nombre: Organización industrial
+        \item NRC: 92681
+        \item Clave: ECTE - 38008
+        \item Créditos: 8
+    \end{itemize}
+\end{tcolorbox}
+
+%Profesor
+\begin{tcolorbox}[title=\large Información del Profesor]
+    \begin{itemize}
+        \item Profesor: Miguel Rodrigo Ávila
+Pulido
+        \item Correo: miavila@uv.mx
+    \end{itemize}
+\end{tcolorbox}
+
+%horario
+\begin{table}[h]
+\centering
+\begin{tabular}{l|ll}
+\multicolumn{3}{c}{\textbf{Horario}}      \\ 
+\hline
+Martes     & 7:00 & 9:00          \\ 
+\hline
+Jueves & 7:00 & 9:00          \\ 
+\hline
+Viernes   & 9:00 & 11:00          \\ 
+\hline
+\multicolumn{3}{c}{Aula: 217}   
+\end{tabular}
+\end{table}
+\pagebreak
+
+%Clases
+\section{Clase del 19 de agosto}
+
+\subsection*{Organización industrial}
+
+La organización industrial estudia la competencia imperfecta. En las economías de mercado se tiene que 
+
+\begin{itemize}
+    \item Las firmas deciden qué y cuanto producir
+    \item Los consumidores eligen comprar en la mejor alternativa por precio, calidad, ubicación, etc.
+\end{itemize}
+
+Este curso estudia el comportamiento de las empresas.
+
+\subsection*{Historia de la Organización industrial}
+
+\subsubsection*{Harvard}
+
+\textbf{Caso: Demanda del gobierno de EE.UU contra \textit{US Steel}:} La firma concentraba el $70\%$ del mercado de producción de acero. El gobierno americano perdió la demanda, \textit{US Steel} no violó la ley de competencia pues \textit{"La Ley no hace al tamaño una ofensa"}.
+
+¿Comó inferis comportamientos ilegales a partir de características estructurales como el tamaño? A partir de esto se creo el siguiente marco
+
+\begin{tcolorbox}[title=Definición]
+$\text{Marco}=\text{Estructura}\rightarrow \text{Conducta}\rightarrow \text{desempeño}$
+\end{tcolorbox}
+
+
+La estructura determina la forma en la que las firmas interactuan entre sí, con los compradores y los potenciales entrantes.
+
+\begin{tcolorbox}[title=Definición]
+Estructura $ = f$(Firmas, tecnología, productos, etc.)
+\end{tcolorbox}
+
+La estructura determina la conducta (forma en la que las firmas se comportan en una estructura de mercado dada). La conducta determina el desempeño (Beneficios, excedentes, bienestar)
+
+Señalan que la alta concentración de mercado reduce el excedente de los consumidores.
+
+\textbf{Debilidades:} Suponer que la concentración es exógena, no tomar en cuenta diferencias interindustriales.
+
+\subsubsection*{Chicago}
+
+Está de acuerdo con \textbf{Harvard} en que las firmas con mayor concentración de mercado tienden a generar mayores beneficios. Para \textbf{Harvard} esto implica que los mercados concentrados son menos competitivos.
+
+Para \textbf{Chicago} este no es el caso, puede ser que las firmas con mayor de mercado sean más eficientes y por ello tengan mayores beneficios.
+
+\textbf{Énfasis en teoría de precios:} Afirman que el comportamiento monopólico es dificil de confirmar, no ocurre con frecuencia y cuando ocurre es tipicamente transitorio.
+
+\subsubsection*{Post Chicago}
+
+Énfasis en la toma de decisiones estratégicas, el comportamiento de las firmas se representa con modelos matemáticos y de toería de Juegos. Se construye un marco formal que supera el debate entre \textbf{Chicago} y \textbf{Harvard}.
+
+También surge nueva literatura empírica que combina los modelos matemáticos con pruebas econométricas (\textit{Ordered-probit, multinomial-logit, random coefficient logit, etc.}) computacionalmente demandantes.
+
+\textbf{Dificultades:} ¿Qué modelos usar para cada caso? Efectos de segundo orden.
+
+\subsection*{Competencia Perfecta}
+
+\begin{tcolorbox}[title= Supuestos]
+
+Un agente se comporta de forma competitiva si:
+
+\begin{itemize}
+    \item Suponen que el precio de mercado está dado.
+    \item Bienes homogeneos.
+    \item Libre entrada y salida, por ejemplo los costos fijos pueden ser considerados una barrera de entrada.
+    \item Información perfecta.
+    \item No hay externalidades.
+    \item Bienes perfectamente divisibles.
+    \item No hay costos de transacción.
+\end{itemize}
+
+\end{tcolorbox}
+
+
+\section{Clase del 21 de agosto}
+
+\subsection*{El Benchmark de competencia perfecta}
+
+\textbf{Objetivo de la firma:} Maximizar beneficios por lo que se tiene que 
+
+\begin{tcolorbox}[title=Precio en competencia perfecta]
+    $$\text{max}=pq-C(q)$$
+Obteniendo F.C.O
+    $$ p-C'(q)=0 $$
+    $$ p=C'(q)$$
+    $$ p=MC(q) $$
+\end{tcolorbox}
+
+Se tienen los siguientes funciones de costo
+
+\begin{itemize}
+    \item Costo total: $C(q)=c(q)+F$
+    \item Costo variable: $c(q)$
+    \item Costo medio: $AC=\frac{c(q)}{q}+\frac{F}{q}$
+    \item Costo marginal: $MC= C'(q)$
+    \item Costo variable medio: $AVC=\frac{c(q)}{q}$
+    \item Costo fijo medio: $AFC=\frac{F}{q}$
+\end{itemize}
+
+
+
+% Aquí va la gráfica 1.....
+
+
+\textbf{Demuestre} que la curva de costo marginal cruza la curva de costo medio en su mínimo.
+
+Sea $\hat{Q}$ la cantidad que minimiza $AC:\frac{dAC(\hat{Q})}{d\hat{Q}}=0$ se tiene que 
+
+$$
+\dfrac{AC(Q)}{dQ}= \frac{dC(Q)}{dQ}\cdot Q^{-1}+ C(Q)(-1)Q^{-2},
+$$
+
+$$ 
+\vdots
+$$
+
+$$
+\dfrac{AC(Q)}{dQ} = \dfrac{\frac{dC(Q)}{dQ}Q-C(Q)}{Q^{2}}.
+$$
+
+Si se tiene que $Q=\hat{Q}$, se cumple que 
+
+$$ \frac{dAC(\hat{Q})}{d\hat{Q}}=C(\hat{Q}),$$
+
+por lo que 
+
+$$ \dfrac{AC(Q)}{dQ} = \dfrac{C(\hat{Q})-C(\hat{Q})}{\hat{Q}^{2}} = 0.$$
+
+\subsection*{Mercado competitivo}
+
+\subsubsection*{Equilibrio de corto plazo}
+
+Pensemos en $n$ firmas idénticas y que los costos fijos son costos fijos son costos hundidos en el corto plazo. La oferta de mercado de corto plazo es la suma horizontal sw curvas de oferta de cada firma
+
+% Aquí van las gráficas 2 y 3 side by side
+
+En el corto plazo puede ser el caso que una firma representativa tenga beneficios mayores a cero.
+
+\subsubsection*{Equilibrio de largo plazo}
+
+La entrada de firmas al mercado en el largo plazo se detiene cuando el precio llega al mínimo del costo promedio se largo plazo.
+
+% Aquí va las gráficas 4 y 5
+
+\section{Clase del 22 de agosto}
+
+
+\subsection*{Recordatorio de bienestar y excedentes}
+
+Se define al \textbf{Bienestar} como la suma de los excedentes de todos los consumidores y de todos los productores. El \textbf{excedente del consumidor} es el área bajo la curva inversa de demanda y por arriba del precio (i.e diferencia entre lo que un consumidor esta dispuesto a pagar y el precio que efectivamente pagó multiplicado por la cantidad consumida).
+
+
+El \textbf{Excedente del productor} es la área de la curva de oferta y abajo del precio.
+
+
+% Aquí va la gráfica 5
+
+\subsection*{Teoremas del bienestar}
+
+\begin{tcolorbox}[title= Primer teorema del bienestar]
+   
+   Es cualquier asignación descentralizada obtenida a tráves de un mercado libre es eficiente en el sentido de pareto y maximiza el bienestar social.
+   
+\end{tcolorbox}
+
+\begin{tcolorbox}[title= Segundo teorema del bienestar]
+   
+   Es cualquier asignación en la curva de contratos es alcanzable a través de la redistribución de las asignaciones iniciales.
+   
+\end{tcolorbox}
+
+\subsection*{Teoría de Juegos }
+
+Estudia los problemas de decisión multi-agente. En competencia imperfecta hay interacciones estratégicas entre agentes. 
+
+\subsubsection*{Juego en forma normal}
+
+\begin{enumerate}
+    \item Conjunto de Jugadores $I=\{1,2,\dots,N\}$
+    \item Para cada jugador un conjunto de estrategias $A_i$.
+\end{enumerate}
+
+De esta ultima definimos que sea $a=(a_1,a_2,\dots,a_n)$ una lista de las acciones de cada jugador. Decimos que $a$ es un perfil de acciones.
+
+\begin{enumerate}
+    \item Para cada jugador una función de pago.
+\end{enumerate}
+
+
+
+
+\end{document}
