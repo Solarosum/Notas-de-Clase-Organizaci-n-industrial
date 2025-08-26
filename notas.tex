@@ -46,7 +46,7 @@
 
 %Contenido
 
-\chapter{Organización industrial}
+\chapter{Introducción}
 
 
 %Datos de la materia 
@@ -270,9 +270,98 @@ Estudia los problemas de decisión multi-agente. En competencia imperfecta hay i
 De esta ultima definimos que sea $a=(a_1,a_2,\dots,a_n)$ una lista de las acciones de cada jugador. Decimos que $a$ es un perfil de acciones.
 
 \begin{enumerate}
+	\setcounter{enumi}{2}
     \item Para cada jugador una función de pago.
 \end{enumerate}
 
+
+\section{Clase del 26 de Agosto}
+
+\subsection*{Ejemplo de juego en forma normal}
+
+Suponga que en competencia en precios cuando los bienes son sustitutos perfectos
+
+\begin{enumerate}
+	\item Conjunto de Jugadores: $I: \{f1, f2\}$
+	\item Conjunto de estrategias: $ P_i \in R_{++}$
+	\item Conjunto de funciones de pagos: $\Pi_i(P_i,P_j) = (P_i-C_i)q_i(P_i,P_j)$
+\end{enumerate}
+
+\subsection*{Dilema del prisionero}
+
+\begin{enumerate}
+	\item Conjunto de Jugadores: $I: \{\text{Prisionero }1,\text{Prisionero } 2\}$
+	\item Conjunto de estrategias: $ S_i= \{ \text{Delatar, no delatar} \}$ para $i \in I$
+	\item Conjunto de funciones de pagos: 
+	
+	$ U_i(S_i,S_2) \begin{cases}
+		-5 & \text{ si } S_i=M,S_j=F \\
+		 -4 & \text{ si } S_i=S_j=F\\
+		  -2 & \text{ si } S_i=S_j=M\\
+		   -1 & \text{ si } S_i=F,S_j=M
+	\end{cases}
+	$
+\end{enumerate}
+
+\subsection*{Representación matricial de Juegos Finitos con dos jugadores}
+
+\textbf{Convenciones:} Las filas representan al jugador 1, las columnas al jugador 2 y en las entradas los pagos.
+
+\subsubsection*{Matriz del dilema del prisionero}
+$$
+\begin{matrix}
+	 &  F & M \\
+	F & (-4,-4) & (-1,-5)  \\
+	M & (-5, -1) & (-2,-2)
+	 
+\end{matrix}
+$$
+
+\subsection*{Equilibrio en estrategias dominantes}
+
+Sea $s\in \Pi^{N}_{j=1}\cdot S_j$ para $i\in\{1,\dots, N \}$ denotemos a $S_{-i} = (S_i,S_2,\dots,S_{i-1},S_{i+1},\dots ,S_n)$ y reescribimos el conjunto de acciones $S$ como $S= (S_i,S_{-i} )$.
+
+En los juegos en forma normal una estrategia es una acción que pertenece al conjunto de acciones de algún jugador.
+
+\begin{tcolorbox}[title= Definición]
+	Si para todo $S_{-i} \in \Pi_{j\neq 1}S_J$ y para todo $s_i \in S_i$ sujeto a que $ s_i \neq \widetilde{s_i} $
+	
+	$$ \Pi_i(\widetilde{S_i},S_{-i})> \Pi_i(S_i,S_{-1}) $$
+
+Se tiene que $\widetilde{s_i} \in S_i$ es una estrategia estrictamente dominante para el jugador $i$.
+	
+\end{tcolorbox}
+
+ 
+En el dilema del prisionero la estrategia estrictamente dominante de ambos jugadores es delatar (F).
+
+\subsection*{Una primera definición de equilibrio}
+
+\begin{tcolorbox}[title= Primera definición de equilibrio]
+	Un perfil de estrategias $s=(\widetilde{s_1},\widetilde{s_2}, \dots \widetilde{s_n}) \in \Pi_{j=1}^N S_j$ es un equilibrio en estrategias dominantes si $\widetilde{S_i}$ es una estrategia dominante para el jugador $i$.
+\end{tcolorbox}
+
+Para el dilema del prisionero (F,F), $U_i=-4$ para $i\in I$. Por lo que no hay razón para que las desiciones de mercado lleven a un óptimo de pareto.
+
+\subsubsection*{La batalla de los sexos}
+
+
+$$
+\begin{matrix}
+	&  Opera & Football \\
+	Opera & (2,1) & (0,0)  \\
+	Football & (0, 0) & (1,2)
+	
+\end{matrix}
+$$
+
+No hay equilibrio en estrategias estrictamente dominantes.
+
+\begin{tcolorbox}[title= Segunda definición de equilibrio]
+	\textbf{Equilibrio de Nash}: Un perfil de estrategias $\widetilde{S}=(\widetilde{S_1},\widetilde{S_2}, \dots, \widetilde{S_n}) \in \Pi_{j=1}^N S_j$ es un equilibrio de Nash si ningún jugador tiene incentivos a desviarse de este perfil estratégico. Esto es: si para todo $i \in I$ para todo $s_i \in S_i$, 
+	
+	$$ \Pi(\widetilde{S_i},\widetilde{S_{-i}})\geq \Pi_i(S_i,\widetilde{S_{-i}}) $$
+\end{tcolorbox}
 
 
 
