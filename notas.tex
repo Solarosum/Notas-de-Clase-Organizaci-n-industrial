@@ -26,6 +26,10 @@
 \usepackage{tikz}
 \usepackage[most]{tcolorbox}
 \usepackage{tabularray}
+\usepackage{mathtools} 
+
+%Diagramas de arbol
+\usepackage{forest}
 
 %Capitulos elegantes
 \usepackage[Rejne]{fncychap}
@@ -167,7 +171,7 @@ Un agente se comporta de forma competitiva si:
 
 \begin{tcolorbox}[title=Precio en competencia perfecta]
     $$\text{max}=pq-C(q)$$
-Obteniendo F.C.O
+Obteniendo F.O.C
     $$ p-C'(q)=0 $$
     $$ p=C'(q)$$
     $$ p=MC(q) $$
@@ -363,6 +367,195 @@ No hay equilibrio en estrategias estrictamente dominantes.
 	$$ \Pi(\widetilde{S_i},\widetilde{S_{-i}})\geq \Pi_i(S_i,\widetilde{S_{-i}}) $$
 \end{tcolorbox}
 
+\section{Clase del 28 de agosto}
 
+\subsection*{¿Cómo encontrar el equilibrio de Nash?}
+
+Tengamos un juego simple $2x2$ con una matriz 
+
+$$
+\begin{matrix}
+	&  C & D \\
+	C & (-1,-1) & (-10,0)  \\
+	D & (0, -10) & (-6,-6)
+	
+\end{matrix}
+$$
+
+Por descripción tengamos que 
+
+\begin{itemize}
+	\item $(C,C)$: No es un equilibrio de Nash, ambos jugadores no tienen incentivos para jugar \textit{D}.
+	
+	\item $(C,D)$: No es equilibrio de Nash, el jugador $1$ tiene incentivos para jugar \textit{D}.
+	
+	\item $(D,C)$: No es equilibrio de Nash, el jugador $2$ tiene incentivos para jugar \textit{D}.
+	
+	\item $(D,D)$: Sí es equilibrio de Nash.
+\end{itemize}
+
+
+\subsubsection*{Ejemplo}
+
+$$
+\begin{matrix}
+	&  C & D \\
+	C & (2,1) & (0,0)  \\
+	D & (0,0) & (1,2) 
+	
+\end{matrix}
+$$
+
+\begin{itemize}
+	\item $(O,O)$: Sí es equilibrio de Nash
+
+	\item $(F,F)$: Sí es equilibrio de Nash
+\end{itemize}
+
+
+Si el juego más complejo, resolverlo por inspección tomaría mucho tiempo.
+
+\subsubsection*{Análisis de Mejor Respuesta}
+
+\begin{itemize}
+	\item Sea $i \in \{1,2,\dots , N \}$ y $S_{-i} \in \Pi_{j\neq1} S_j$
+	\item Sea $BR_i(S_{-i})=\text{ arg.max } U_i(s_i,S_{-i})$
+	\item Si $S_{-i} \in \Pi_{j\neq1} S_j \rightarrow \text{ Si }BR_i(S_i)$ es la correspondencia de mejor respuesta del jugador $i$.
+\end{itemize}
+
+\begin{tcolorbox}[title= Nota]
+	
+Varios valores de $s_i$ podrían resolver el problema de maximización. \textit{arg.max} es el conjunto de valores de "$x$" para los que la función alcanza su valor máximo.
+
+Un perfil estratégico $$\widetilde{S}=(\widetilde{s_1},\widetilde{s_2},\dots, \widetilde{s_N})\in \Pi_{j=1}^N S_j,$$ es un equilibrio de Nash si para todo i: 
+
+$$ \widetilde{S_i}\in BR_i(S_{-i}). $$
+
+\end{tcolorbox}
+
+
+Cada jugador elige una estrategia que es su mejor respuesta a las estrategias de equilibrio de sus rivales.
+
+Para resolver un juego encontrando el equilibrio de Nash con análisis de mejor respuesta:
+
+\begin{enumerate}
+	\item Para cada jugador $i$, buscar la correspondencia de mejor respuesta $BR_i(\cdot)$
+	\item Buscar las intersecciones de las mejores respuestas, con esto obtendrás todos los equilibrios de Nash.
+\end{enumerate}
+
+\subsubsection*{Ejemplo}
+Considere la competencia en precios con productos diferenciados $c_1=c_2=0$.
+Sea la función de pagos $\Pi_i(P_i,P_j)=(P_i-C_i)q_i(P_i,P_j),$ suponga $q_i=1-2P_i+P_j$. Encuentre el equilibrio de Nash:
+
+%No sé si el uso de align sea la mejor solución
+
+Partiendo desde la función de pagos
+\begin{align*}
+	\Pi_i(P_i,P_j) &=(P_i-C_i)\cdot q_i(P_i,P_j),\\
+	\shortintertext{sustituyendo $q_i$}
+	\Pi_i(P_i,P_j) &=(P_i-C_i) \left( 1-2P_i+P_j\right),\\
+		\shortintertext{considerando $C_i=0$}
+	\Pi_i(P_i,P_j) &= P_i \left( 1-2P_i+P_j\right) ,\\
+	\Pi_i(P_i,P_j) &= P_i-2P_i^2+P_iP_j.
+\end{align*}
+\vspace{.75cm}
+Calculando las F.O.C
+\begin{equation*}
+	\dfrac{\partial \Pi_i(P_i,P_j)}{\partial q_i} = 
+	1-4P_iP_j=0,
+\end{equation*}
+
+se sigue que
+
+\begin{align*}
+1-4P_iP_j&=0, \\
+4P_i+P_j&=1, \\
+4P_i&=1-P_j,\\
+P_i&=\frac{1-P_j}{4}.
+\end{align*}
+Por lo que la función de mejor respuesta esta dada por 
+
+$$ BR_i= \frac{1-P_j}{4}.$$
+
+
+El proceso es análogo para el caso de $P_j$, sustituyendo $P_j$ en $P_i$
+
+\begin{align*}
+	P_i&=\frac{1-\left( \frac{1-P_i}{4} \right) }{4},\\
+	P_i&=\frac{\frac{4-1+P_i}{4} }{4},\\
+	P_i&=\frac{3+P_i}{16},
+\end{align*}
+
+% Separado para que haya una mejor distribución
+
+\begin{align*}
+	P_i&=\frac{3+P_i}{16},\\
+	16P_i&=3+P_i,\\
+	15P_i&=3,\\
+	P_i &= \dfrac{3}{15}=\dfrac{1}{5}.
+\end{align*}
+
+Análogamente se se observa que 
+
+$$ P_i = P_j = \dfrac{1}{5}. $$
+
+\section{Clase del 29 de agosto}
+
+\subsection*{Comentarios}
+
+\begin{enumerate}
+	\item Un equilibrio en estrategias dominantes es siempre un equilibrio de Nash.
+	\begin{itemize}
+		\item Una estrategia dominante es la mejor respuesta a cualquier perfil estratégico.
+		\item Un equilibrio de Nash no siempre es equilibrio en estrategias dominantes.
+	\end{itemize}
+	\item Al buscar el equilibrio de Nash, solo considera desviaciones unilaterales del perfil estratégico.
+\end{enumerate}
+
+
+\begin{tcolorbox}[title=Fundamentos del equilibrio de Nash]
+	\begin{itemize}
+		\item Todos los agentes son racionales y todos los agentes son racionales.
+		\item Como los agentes son racionales, harán lo posible por maximizar su utilidad dadas las acciones de sus rivales.
+		\item Al final se jugará un perfil estratégico del por que ningún agente se desviará.
+	\end{itemize}
+\end{tcolorbox}
+
+\subsubsection*{¿Cómo elegir entre varios equilibrios de Nash?}
+
+\begin{itemize}
+	\item Ocasionalmente uno es Pareto dominante
+	\item Otras veces uno actúa como punto focal
+\end{itemize}
+
+En juegos repetidos, el proceso de aprendizaje lleva a un equilibrio de Nash, incluso sin agentes racionales. La historia, dependiendo del punto de partida, podrías converger a equilibrios de Nash distintos.
+$$
+\begin{matrix}
+  &	Piedra & Papel & Tijera \\
+  Piedra & (0,0) & (-1,1) & (1,-1) \\
+  Papel & (1,-1) & (0,0) & (-1,1) \\
+  Tijera & (-1,1) & (1,-1) & (0,0)
+\end{matrix}
+$$
+
+\textbf{No hay equilibrio de Nash en estrategias puras}
+$$
+\begin{matrix}
+	&	Divide & Roba \\
+	Divide & (\frac{1}{2},\frac{1}{2}) & (0,1) \\
+	Roba & (1,0) & (0,0)
+\end{matrix}
+$$
+
+En \textit{(Divide, Roba), (Roba, Divide), (Roba, Roba)}.
+
+\subsection*{Juegos de forma extensiva}
+\subsubsection*{Juego del piloto vs terrorista}
+
+% Poner esa coma fue un martirio
+
+\begin{forest}
+	[El piloto mueve [Volar a cuba [Bomba [$(?\text{,}-1)$] ] [No bomba[$(1\text{,}1)$]]][Volar a NYC[Bomba[($-1\text{,}-1)$] ] [No Bomba [$(2\text{,}0)$]]]]
+\end{forest}
 
 \end{document}
