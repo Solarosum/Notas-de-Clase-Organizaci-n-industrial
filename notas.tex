@@ -515,7 +515,7 @@ $$ P_i = P_j = \dfrac{1}{5}. $$
 
 \begin{tcolorbox}[title=Fundamentos del equilibrio de Nash]
 	\begin{itemize}
-		\item Todos los agentes son racionales y todos los agentes son racionales.
+		\item Todos los agentes son racionales y todos los agentes saben que son racionales.
 		\item Como los agentes son racionales, harán lo posible por maximizar su utilidad dadas las acciones de sus rivales.
 		\item Al final se jugará un perfil estratégico del por que ningún agente se desviará.
 	\end{itemize}
@@ -555,7 +555,93 @@ En \textit{(Divide, Roba), (Roba, Divide), (Roba, Roba)}.
 % Poner esa coma fue un martirio
 
 \begin{forest}
-	[El piloto mueve [Volar a cuba [Bomba [$(?\text{,}-1)$] ] [No bomba[$(1\text{,}1)$]]][Volar a NYC[Bomba[($-1\text{,}-1)$] ] [No Bomba [$(2\text{,}0)$]]]]
+	[El piloto mueve [Volar a cuba [Bomba [$(1\text{,}-1)$] ] [No bomba[$(1\text{,}1)$]]][Volar a NYC[Bomba[($-1\text{,}-1)$] ] [No Bomba [$(2\text{,}0)$]]]]
 \end{forest}
+
+
+$$
+\begin{matrix}
+	& BnNB & NB,B & B,B & NB,NB \\
+	Cuba & (-1,-1) & (1,1) & (-1,-1) & (1,1)\\
+	NYL & (2,0) & (-1,-1) & (-1,-1) & (2,0)
+\end{matrix}
+$$
+
+\subsection*{Equilibrios de Nash}
+
+\begin{itemize}
+	
+	\item \textit{(Cuba,(NB,B))}
+	\item \textit{(NYL,(B,NB))}
+	\item \textit{NYL(NB,NB)}
+\end{itemize}
+
+
+\section{Clase del 2 de septiembre}
+
+Consideremos el primer equilibrio, un piloto racional diría, si vuelo a NYC, es interés del terrorista cambiar a \textit{NB} en lugar de \textit{B}. Este razonamiento no es capturado por el equilibrio de Nash:
+
+\begin{center}
+\noindent \textbf{Algunos equilibrios de Nash se sostienen por amenazas no creíbles.}
+\end{center}
+
+Necesitamos un concepto de equilibrio que elimine amenazas no creíbles.
+
+\subsection*{Inducción hacia atrás (Backward induction)}
+
+\begin{enumerate}
+	\item Empieza resolviendo para las desiciones óptimas en el nodo terminal, encuentre los pagos.
+	\item Vaya un paso atrás, resuelva para las desiciones óptimas, anticipando que todos se comportan racionalmente en nodos subsecuentes, encuentre los pagos.
+	\item Itere hasta alcanzar el modo inicial.
+\end{enumerate}
+
+% Aquí va el la solución del arbol
+
+
+\textbf{Equilibrio:} \textit{(NYC, (NB,NB))}.
+
+\subsection*{Equilibrio Perfecto en subjuegos}
+
+\begin{tcolorbox}[title=Definición]
+	Un subjuego es un nodo de decisión del juego original con los nodos de decisión y los nodos terminales que siguen directamente a este nodo.
+\end{tcolorbox}
+
+Un subjuego es llamado subjuego estricto si es distinto del juego original.
+
+\begin{tcolorbox}[title=Definición]
+
+Un perfil estratégico es un equilibrio perfecto en subjuegos si induce un equilibrio Nash en cada subjuego del juego original.
+
+\end{tcolorbox}
+
+\subsubsection*{Suponga un juego finito:}
+Incluso si los jugadores mueven simultáneamente el juego puede resolverse por \textit{backward induction}.
+
+\begin{enumerate}
+	\item Inicie por los subjuegos más profundos y encuentre el equilibrio de Nash en ellos.
+	\item En la forma extensiva, remplaza los subjuegos más pequeños por los pagos del equilibrio de Nash.
+	\item Itera hasta que no queden subjuegos.
+\end{enumerate}
+
+ \subsection*{Resumen}
+ 
+ \begin{tcolorbox}[title= Juego en forma normal]
+ 	Tres conjuntos \textit{(jugadores, acciones, pagos)}
+ 	
+ 	\begin{itemize}
+ 		\item Solución: Equilibrio perfecto en subjuegos / equilibrio de Nash
+ 		\item Prueba y error / función de mejor respuesta
+ 	\end{itemize}
+ 	
+ \end{tcolorbox}
+ 
+ \begin{tcolorbox}[title= Juegos en forma extensiva]
+ 	\begin{itemize}
+ 		\item Concepto de solución: equilibrio perfecto en subjuegos (elimina amenazas no creíbles)
+ 		\item Método: Con periodos finitos usar inducción hacia atrás
+ 	\end{itemize}
+ \end{tcolorbox}
+
+\chapter{.-.}
 
 \end{document}
