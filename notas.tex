@@ -50,7 +50,7 @@
 
 %Contenido
 
-\chapter{Introducción}
+\chapter{Parte Uno}
 
 
 %Datos de la materia 
@@ -641,7 +641,377 @@ Incluso si los jugadores mueven simultáneamente el juego puede resolverse por \
  		\item Método: Con periodos finitos usar inducción hacia atrás
  	\end{itemize}
  \end{tcolorbox}
+ 
+ 
+\chapter{Parte II}
 
-\chapter{.-.}
+\section{Clase del 9 de Septiembre}
+
+\section*{Monopolio de bienes durables}
+
+Bienes que solo se compran cada $\pm3$ años y se usan todo ese periodo (celulares, pantallas, refrigeradores, autos).
+
+\subsection*{Conjetura de Coase}
+
+Suponga que un monopolista tiene toda la tierra del mundo y quiere venderla al mayor beneficio descontado posible.
+
+\begin{itemize}
+	\item Año 1: El monopolista vende la mitad de la tierra a $P^M_1$ (i.e demanda lineal con MC=0)
+	\item Año 2: El monopolista quiere vender lo mismo pero, a menos que la población crezcaa muy rápido, la demanda será menor $P^M_2<P^M_1$
+\end{itemize}
+
+\begin{tcolorbox}
+	"Si los consumidores no descuentan mucho el tiempo y esperan que el precio baje en el futuro, el monopolio de bienes durables cobra un precio menor que el monopolio tradicional"
+\end{tcolorbox}
+
+\textbf{Modelo A:} Continuo de consumidores, demanda con pendiente negativa, consumidores viven dos periodos, costo marginal cero. Demanda agregada de un periodo por los servicios del bien $P=100-q$
+
+\textbf{Juego:}
+
+\begin{itemize}
+	\item Jugadores: Consumidores y monopolista.
+	\item Conjunto de acciones: Vendedor elige $q_1$ y $q_2(q_1)$, compradores eligen si comprar en cada periodo.
+	\item Pagos: $PS$, $CS$ (no se descuentan).
+\end{itemize}
+
+\textbf{Buscamos el equilibrio perfecto en subjuegos:} La técnica a utilizar es backward induction. 
+
+\textbf{En el periodo 2:} Suponga que se vendió $\bar{q_1}$ en el primer periodo los consumidores que consumieron en el primer periodo lo vuelvan a comprar.
+
+$$\text{Demanda periodo 2} \rightarrow P=100-\bar{q_1}-q_2$$
+
+Recordemos la condición de maximización del monopolio ($MR=MC$)
+
+\begin{align*}
+	B =& (100-\bar{q_1}-q_2)(q_2) \\
+	B =& 100q_2-\bar{q_1}q_2-q_2^2 \\
+	MR =& 100-\bar{q_1}-2q_2 = 0 \\
+	MR =& 100-\bar{q_1}=2q_2\\
+	MR = & \dfrac{100-\bar{q_1}}{2}=q_2
+\end{align*}
+
+Sustituyendo en la función de la inversa de demanda
+
+\begin{align*}
+	P_2 = & 100-\bar{q_1} - \dfrac{100-\bar{q_1}}{2}\\
+	P_2 =& 100-\bar{q_1}-50+\dfrac{\bar{q_1}}{2}\\
+	P_2=& 50-\dfrac{\bar{q_1}}{2}
+\end{align*}
+
+Obteniendo los beneficios
+
+\begin{align*}
+	\Pi_2 =& \left( 50-\dfrac{\bar{q_1}}{2}\right) \left( 50-\dfrac{\bar{q_1}}{2}\right)  \\
+	\Pi_2 =& \left( 50-\dfrac{\bar{q_1}}{2}\right) ^2
+\end{align*}
+
+Suponga que el monopolista vende $\bar{q_1}$ en $t=1$ ¿Cuál es el máximo $P$ que puede cobrar?
+
+El consumidor marginal debe estar indiferente entre comprar en $t=1$ y $t=2$
+Excedente del consumidor que compra en el primer periodo
+
+$$
+2(100-\bar{q_1})-P_1
+$$
+
+Excedente del consumidor que compra que compra en el segundo periodo 
+
+$$ 100-q_1-P_2$$
+
+Igualando se tiene que 
+
+\begin{align*}
+	50- \dfrac{\bar{q_1}}{2} =& 200- 2\bar{q_1}-P_1\\
+	2\bar{q_1}-\dfrac{\bar{q_1}}{2}=&  150-P_1\\
+	\dfrac{4\bar{q_1}-\bar{q_1}}{2}=&  150-P_1	\\
+	\dfrac{3\bar{q_1}}{2}=& 150-P_1\\
+	150-\dfrac{3\bar{q_1}}{2} =& P_1
+\end{align*}
+
+Calculando los beneficios de ambos periodos
+
+
+$$Max_{q_1}(\Pi_1+Pi_2)= \left( 150-\dfrac{3\bar{q_1}}{2}\right)q_1 + \left( 50-\dfrac{\bar{q_1}}{2}\right) ^2
+$$
+
+
+\section{Clase del 11 de septiembre}
+
+\textbf{Estrategia alternativa:} Rentar los bienes. Vender equivale a cobrar un único precio por periodo de tiempo indefinido. Rentar es cargar un precio por usar un bien un definido.
+
+\begin{itemize}
+	\item Demanda agregada: $ P=100-q $
+\end{itemize} 
+
+\textbf{Resolveremos el modelo estático dos veces}
+
+\textbf{Para el periodo 1}
+
+$$ P=100-q $$
+
+Calculando beneficios
+
+$$R = (100-q)q,$$
+
+$$R = 100q-q^2$$
+
+Derivando e igualando a cero
+
+\begin{align*}
+	\frac{\partial R}{\partial q} &= 100-2q\\
+	0 &= 100-2q, \\
+	2q &= 100, \\
+	\frac{100}{2} &= q\\
+	50 &= q.
+\end{align*}
+
+Sustituyendo en la inversa de demanda
+
+$$ P=100-q, $$
+$$ P= 100-50, $$
+$$ P=50.$$
+
+\textbf{¿La firma prefiere vender o rentar bienes? La firma prefiere rentar.}
+
+\subsection*{Oligopolio estático: Competencia de Bertrand}
+
+Método para estudiar oligopolio que bajo ciertas condiciones resulta en un equilibrio de Nash en un juego de precios.
+
+\begin{itemize}
+	\item $2$ Firmas
+	\item $q(P)$ demanda total por el bien homogéneo
+	\item $ q(\cdot) < 0$
+	\item  Consumidores consumen del vendedor más barato.
+	\item Si los vendedores cobran lo mismo, los consumidores se dividen $50/50$
+\end{itemize}
+
+
+Sea la demanda de la firma $q_i$
+
+$$ q_i(P_1,P_2) \begin{cases}
+	
+	q(P_1) \text{ si } P_1<P_2 	\vspace{.25cm}  \\
+	
+\vspace{.25cm}	\dfrac{q(P)}{2} \text{ si } P_1=P_2 \\
+
+	0 \text{ si } P_1>P_2	
+\end{cases}$$
+
+\textbf{Juego en forma normal:}
+
+\begin{itemize}
+	\item Jugadores: $I= \{ \text{Firma 1, Firma 2} \}$
+	\item Estrategias: $s_i=\{ P_1,P_2 \} | P_1,P_2\in R_{+}$
+	\item Pagos: $\Pi_i=(P_i-C_i)\cdot q_i(P_1,P_2)$
+\end{itemize}
+
+\textbf{Concepto de equilibrio: Equilibrio de Nash}
+
+Un par $ \{ P_1^B, P_2^B \} $ es un equilibrio de Bertrand (Nash en precios) si:
+
+\begin{enumerate}
+	\item  Dado $P_2$
+\end{enumerate}
+
+
+\section{Clase del 12 de septiembre}
+
+\subsection*{Bertrand con costos por cambiar de proveedor}
+
+En algunas industrias los consumidores deben pagar por cambiar de proveedor. 
+
+\begin{itemize}
+	\item Compatibilidad (\textit{Google}, \textit{Microsoft})
+	\item Costos de transacción (Acceso a internet)
+	\item  Costos de aprendizaje
+	\item Costos psicológicos (lealtad de marca)
+\end{itemize}
+
+\begin{tcolorbox}[title=Supuestos]
+	\begin{itemize}
+		\item 2 firmas
+		\item 2 periodos
+		\item Bien homogéneo
+		\item Costos constantes $c$ por periodo
+		\item Consumidores forward-looking
+		\item Masa de consumidores 1 
+		\item Utilidad bruta $U$ por consumir el bien por cada periodo
+		\item No hay tasa de descuento
+	\end{itemize}
+\end{tcolorbox}
+
+En el periodo $2$ si un consumidor compró a la firma $i$ en $t=1$ debe pagar $\sigma$ para comprar a $j$ en $t=2$. Suponga que $\sigma>U-c$ (costo por cambiar es suficientemente grande)
+
+\subsubsection*{Tiempo}
+
+\begin{itemize}
+	\item $t=1$: Firmas $1$y $2$ eligen $P_1^1$ y $P_2^1$ simultáneamente.
+	\item  $t=1.5$: Consumidores eligen sus proveedores (avientan una moneda)
+	\item $t=2$ Firmas $1$ y $2$ eligen precios $P_1^2$ y $P_2^2$ simultáneamente.
+	\item $t=2.5$: Consumidores eligen proveedores
+\end{itemize}
+
+\subsubsection*{Resolución}
+
+Iniciamos en el $t=2$. Sea $s_i$ el market share de la firma $i$ en  $t=1$.
+
+$$ P_i^2 \leq P_j^2-\sigma, $$
+
+como la firma $j$ quiere vender una cantidad positiva, su precio debe ser 
+
+$$P_j^2\leq U,$$
+
+debe ser el caso que $P_i$:
+
+$$P_j^2\leq U-\sigma \leq c, $$
+
+si los costos por cambiar de producir son altos, no es rentable para la firma $i$ ganar market share en $t=2$. Ambas firmas se concentran en sus consumidores y cobran $P_i² = U.$ Los beneficios son
+
+$$\Pi_i=(U-c)s_i$$
+
+Para $t=1.5$ Los consumidores anticipan que tendrán excedente cero en el segundo periodo. Se sigue que los consumidores compran del proveedor más barato en $t=1.5$
+
+$$s_i(P_i^1,P_j^1)= \begin{cases}
+	1 \text{ si } P_i^1<P_j^1\\
+	\dfrac{1}{2} \text{ si } P_i^1=P_j^1\\
+	0 \text{ si } P_j^1<P_i^1
+\end{cases} $$
+
+con beneficios
+
+$$ \Pi_i^1 (P_1^1,P_2^1)= \begin{cases}
+	P_1-c \text{ si } P_i^1<P_j^1\\
+	\dfrac{P_i-c}{2} \text{ si } P_i^1=P_j^1\\
+	0 \text{ si } P_j^1<P_i^1
+\end{cases} $$
+
+Para obtener los precios se tiene que 
+
+$$\Pi_i(P_i^1,P_j^1)= \begin{cases}
+	P_i^1-2c+U | P_i^1<P_j^1, P_i^1\leq U \\
+	\dfrac{P_i^1+U}{2}-c \text{ si } P_i^1=P_j^1\\
+	0 \text{ si } P_j^1<P_i^1
+\end{cases} $$
+
+Por conocimientos de Bertrand o por casos se llega que el precio es
+
+$$P_i^1=2c-U,$$
+
+esto es el Costo marginal percibido por los consumidores.
+
+\subsection*{Competencia de Cournot}
+
+Análisis de oligopolio que bajo ciertas condiciones es un equilibrio de Nash en un juego de cantidades
+
+\begin{tcolorbox}[title= Supuestos]
+	\begin{itemize}
+		\item Firmas eligen nivel de producción
+		\item $2$ Firmas
+		\item Costos: $C_i(q_i)=c_iq_i$ $|$ $ i=1,2$
+		\item Demanda: $P(Q)= a-bQ$ $|$ $Q=q_1+q_2$
+	\end{itemize}
+\end{tcolorbox}
+
+\subsubsection*{Juego en forma normal}
+
+\begin{itemize}
+	\item Jugadores: $N= \{\text{Firma 1, Firma 2}\}$
+	\item Estrategias: $S_i=q_i \in R_+$
+	\item Pagos: $\Pi_i(q_1,q_2)= P(Q)q_i-c_i(q_i)$ para $i \in N$
+\end{itemize}
+
+Un par $(q_i^c,q_2^2)$ es un equilibrio de Cournot si:
+
+Dado $q_2= q_2^c, q_1^c$ resuelve $\text{max}_{q_{1}} \Pi_1(q_1,q_2^c)$.
+
+Dado $q_1=q_1^c,q_2^c$ resuelve $\text{max}_{q_{2}}\Pi_2(q_1^c,q_2)$
+
+Dado que los rivales juegan la estrategia de equilibrio de Cournot en cantidades, ninguna firma puede elevarse beneficios cambiando su nivel de producción.
+
+Los correspondientes niveles de precio en el equilibrio de Cournot son:
+
+$$ p^c=a-b(q_1^c+q_2^c) $$
+
+\subsubsection*{Extensión al caso con n firmas}
+
+Cada firma maximiza beneficios de acuerdo a: 
+
+$$ \Pi(q_1,q_2,\dots,q_n)= P(Q)q_i-c_i(q_i) $$
+
+La función de mejor respuesta para $i$ es 
+
+\section{Clase del 19 de septiembre}
+
+\subsection*{Análisis de Bienestar}
+
+
+El excedente del consumidor es el área entre la curva de demanda y el preciode mercado.
+
+Calcule el excedente del consumidor para el ejemplo anterior sería 
+
+$$ CS= \frac{[N(a-c)]^2}{2b(N+1)^2} $$
+
+para el caso del productor se tiene que 
+
+$$  PS= \frac{N(a-c)^2}{b(N+1)^2}  $$
+
+Siendo el bienestar 
+
+$$ W= \frac{N(a+c)^2(N+2)}{2b(N+1)^2} $$
+
+\subsection*{Actividades opcionales}
+
+\begin{itemize}
+	\item ¿Qué ocurre con el bienestar cuando el número de firmas aumenta?
+	\item ¿Qué ocurre en Cournot con costos asimétricos?
+	\item En Cournot con costos asimétricos, obtenga una expresión para el indice de lerner que relacione el Market share de la firma $i$ con la elasticidad inversa.
+	
+\end{itemize}
+
+	\subsection*{Cournot con Movimientos Secuenciales (Stackelberg)}
+
+Misma estructura que el modeloen un solo tiempo. Las firmas mueven de forma secuencial.
+
+\begin{tcolorbox}[title= Tiempos]
+	\begin{itemize}
+		\item $t=1$ Firma $1$ elige $q_1$ (líder)
+		\item $t=2$ Firma $2$ elige $q_2$ (seguidora)
+	\end{itemize}
+\end{tcolorbox}
+
+Resolveremos con Backward induction
+
+\begin{tcolorbox}[title=Información necesaria]
+	\begin{itemize}
+		\item $ P(Q) = a-bQ, Q=q_1+q_2$
+		\item $C_i(q_i)= c_iq_i$
+	\end{itemize}
+\end{tcolorbox}
+
+Empezaremos en $t=2$, se tiene que 
+
+$$ \Pi_2 = (a-b(q_1+q_2))q_2-C_2q_2, $$
+
+obteniendo la F.O.C llegamos a
+
+$$ q_2 = \frac{a-C_2}{2b}-\frac{1q_1}{2} $$
+
+Ahora en t=1
+
+$$ \Pi_1 = (a-b(q_1+q_2))q_1-C_1q_1, $$
+
+obteniendo la F.O.C llegamos a
+
+$$ q_1=\frac{q+C_2-2C_1}{2b}$$
+
+sustituyendo $q_1$ en $q_2$ se tiene que 
+
+$$ q_2= \frac{a-3C_2+2C_1}{4b} $$
+
+\chapter{Ejercicios}
+
+\section{Primera lista de ejercicios}
+
+\subsection*{Ejercicio I}
 
 \end{document}
