@@ -1008,6 +1008,192 @@ sustituyendo $q_1$ en $q_2$ se tiene que
 
 $$ q_2= \frac{a-3C_2+2C_1}{4b} $$
 
+\section{Clase del 23 de septiembre}
+
+\subsection*{Comparación de Stackelbeg y Cournot}
+
+Veamos que 
+
+$$\begin{matrix}
+	\text{Stackelberg} & \text{Cournot}\\
+	
+	q_1= \dfrac{a-c}{2b} & q^c=\dfrac{a-c}{3b}\\
+	
+	q_2= \dfrac{a-c}{4b}
+	
+\end{matrix}
+$$
+
+\subsection*{Conclusiones:}
+
+\begin{itemize}
+	\item Competencia de Cournot: Firmas eligen $q$
+	\item Competencia de Stackelberg: Firmas eligen $q$ secuencionalmente
+	\item Competencia de Bertrand: Firmas eligen precios
+\end{itemize}
+
+\textbf{¿Qué modelo usar?} Si la capacidad y el nivel de producción se ajustan facilmente, Bertrand. Si la capacidad es dificil de ajustar, Cournot.
+
+\begin{itemize}
+	\item Excedente del consumidor: $CS^M<CS^C<CS^S<CS^{PC}$
+	\item Excedente del productor: $PS^M>PS^C>PS^S>PS^{PC}$
+\end{itemize}
+
+\subsection*{Oligopolio Dinámico}
+
+Bajo competencia oligopólica las acciones de las firmas generan externalidades competitivos.
+
+\textbf{Colusión:} Ocurre cuando las firmas se ponen de acuerdo en un perfil de precios o cantidades que reducen las externalidades competitivas. La colusión también puede ocurrir en decisiones de inversión o publicidad. La colusión es ilegal en México, EE.UU, entre otros países.
+
+\textbf{¿Cómo explicarias Bertrand a un estudiante de MBA?}
+
+Guerra de precios: Si ambos tenemos $P>MC$ y yo bajo mis precios hoy, es de esperarse que mi rival baje su precio mañana y que el proceso siga hasta que $P=MC$.
+
+\subsection*{Colusión en el oligopolio de Cournot}
+
+Iniciamos con Cournot en un periodo, las firmas eligen cantidades simultáneamente y tienen costo constante unitario cero.
+
+\textbf{Resultado no-cooperativo:}
+
+\begin{itemize}
+	\item Equilibrio de Nash en cantidades donde: 
+		\begin{itemize}
+			\item $q_1^C=\dfrac{a}{3b}$ \item $q_2^C=\dfrac{a}{3b}$ \item $Q=\dfrac{2a}{3b}$ \item $P=\dfrac{a}{3}$  
+			\item $\Pi=\dfrac{a^2}{9b}$
+		\end{itemize}
+\end{itemize}
+
+\textbf{¿Cúal sería el mejor resultado cooperativo?}
+
+Si deciden cooperar maximizarán su función de beneficios conjunta.
+
+$$ \Pi (q_1,q_2)= P(q_1,q_2)(q_1+q_2),$$
+
+como las firmas son iguales $q_1+q_2=Q$ y cada firma produce: $\dfrac{Q}{2}$, entonces:
+
+$$ \Pi (Q)= P(a-b)Q,$$
+
+calculando $Q$, tal que $Q=\dfrac{a}{2b}$ se sustituye en el precio de tal forma que
+
+$$ P=\dfrac{a}{2}$$
+
+por lo que el beneficio es
+
+$$ \Pi =  \dfrac{a^2}{8b}$$
+
+el cuál es mayor que el equilibrio de Nash.
+
+\subsection*{¿El equilibrio cooperativo es sostenible?}
+
+No es sostenible en un juego estático, el único equilibrio de Nash es el resultado no cooperativo (Cournot)
+
+\subsection*{¿Seguimos estando cuerdos?}
+
+¿Qué ocurre si la firma $1$ elige el nivel de producción cooperativo? Si $q_1=\dfrac{a}{4b}$, ¿la firma 2 elige $q_2=\dfrac{a}{4b}$?
+
+Las firmas buscan desviarse en un juego en una etapa, no hay espacio para la colusión, si una firma se desvía, no hay espacio para castigarla.
+
+\section{Clase del 25 de septiembre}
+
+\subsection*{Colusión en el ologopolio de Cournot: Parte 2}
+
+Dado que el resultado cooperativo (colusivo) no es sostenible en un juego en una etapa, repetiremos el juego $T$ veces para permitir castigo por desviaciones. Suponga que las firmas juegan Cournot por $(t+1)$ periodos, $t>0$. En cada periodo $0\leq t \leq T$ las firmas eligen cantidades de forma no cooperativa. Las firmas eligen la estrategia de equilibrio que maximiza sus beneficios descontados:
+
+\begin{itemize}
+	\item Beneficios descontados:  $\sum_{t=0}^{T}\delta^t\Pi_t^i$
+	\item Factor de descuento: $\delta$
+	\item Beneficios de la firma i: $\Pi_t^i$
+\end{itemize}
+
+\subsection*{Concepto de equilibrio: Equilibrio perfecto en subjuegos}
+
+\subsection*{Backward induction}
+
+Empezando en $t=T$, se tiene que como el mundo termina al final del periodo $T$ las firmas juegan Cournot estático, no hay motivos para desviarse del equilibrio no cooperativo pues no habrá forma de castigar.
+
+$$ q_1^c+q_2^c=\dfrac{a}{3b} $$
+
+En $t=T-1$, las firmas saben que independientemente de sus acciones en $t=T-1$ el resultado no cooperativo se jugará en $T$, no hay amenaza de castigo y las firmas juegan Cournot no cooperativo.
+
+$$ q_{T-1}^{1}=q_{T-1}^2=\dfrac{a}{3b} $$
+
+Podemos hacer el mismo argumento para $T-2,T-3,\dots,0$. En cada etapa se jugará el equilibrio de Cournot estático. \textbf{La colusión no es sostenible en el juego de Cournot repetido un número finito de veces}.
+
+\textbf{Rsultado final:} Tomando un juego en forma normal con un único equilibrio de Nash y repitiendolo $T+1$ veces. El único equilibrio perfecto en subjuegos del juego repetido es el equilibrio de Nash del juego en un periodo (repetido $T+1$ veces).
+
+\subsection*{Colusión en el oligopolio de Cournout: Parte 3}
+
+Dado que la colusión no es sostenible mi em Cournot estático ni en Cournot finito, probaremos qué ocurre en Cournot repetido infinitas veces.
+
+Las firmas buscan maximizar son beneficios descontados:
+
+$$\text{max}\sum_{t=0}^{\infty}\delta^i_t $$
+
+El juego puede tener una variedad de equilibrios perfectos en subjuegos. Restringimos el análisis a estrategias simples que llamamos: "estrategias de gatillo". Sea
+
+\begin{itemize}
+	\item La producción de cada firma cuando no cooperan: $q_{NC}=\dfrac{a}{3b}$
+	\item La producción de cada firma cuando se coluden (cooperan): $q_c=\dfrac{a}{4b}$
+\end{itemize}
+
+\textbf{Definimos las estrategias de gatillo:} La firma $i$ juega una estrategia de gatillo si $q_1^{0}=q_t$, firma i elige producción de colusión en $t=0$.
+
+Para todo $t\geq1$: si $q_i^C=...$
+
+\section{Clase del 26 de septiembre}
+
+\subsection*{Colusión en el oligopolio de Cournot: Parte 3}
+
+\begin{tcolorbox}[title=  Proposición]
+	Existe $\delta^*$ al que el resultado en el que ambas firmas juegan sus estrategias de gatillo es un equilibrio perfecto en subjuegos si y solo si $\delta \geq \delta^*$.
+\end{tcolorbox}
+
+Como no se puede usar backward induction se tiene que calcular un resultado en equilibrio perfecto en subjuegos, este es si induce un equelibrio de Nash en cada subjuego del juego original.
+
+Suponga que la firma $1$ juega su estrategia de gatillo, revisamos si en cada subjuego la mejor respuesta de la firma $2$ es jugar su estrategia de gatillo.
+
+Hay dos tipos de subjuegos: 
+
+\begin{enumerate}
+	\item Los que inician en $t$ y alguna firma se desvía en $t'<t$.
+	\item Los que inician en $t$ y no hubo desviaciones antes que $t$.
+\end{enumerate}
+
+\textbf{Consideremos el primer tipo de subjuegos:} Como la firma $1$ juega su estrategia de gatillo, elegirá $q_{NC}$ por siempre. Lo mejor que puede hacer la firma 2 es elegir $q_{NC}$, lo que es parte de su estrategia de gatillo de la firma 2.
+
+El resultado en el que ambas firmas juegan sus estrategias de gatillo es equilibrio de Nash de subjuegos tipo $1$
+
+\textbf{Consideremos el segundo tipo de subjuegos:} Como nadie se ha desviado en la historia y la firma $1$ juega su estrategia de gatillo, la firma 1 juega $q_C$ en $t=t$. \textit{¿Cuál es la mejor desviación posible para la firma 2?} 
+
+Tengamos que Juega su mejor respuesta
+
+$$ BR_2(q_1)=q_2=\dfrac{a-bq_1}{2b},$$
+
+tomando en cuenta que $q_1=\dfrac{a}{4b}$ se tiene que 
+
+$$ q_2=\dfrac{3a}{8b},$$
+
+para el periodo t. En todos los periodos siguientes la \textit{firma 1} suelta el gatillo y juega $q_{NC}$. La mejor respuesta de la \textit{firma 2} es jugar también $q_{NC}$ (equilibrio de Cournot estático).
+
+La firma 2 gana en los periodos $T\geq t+1$ 
+
+$$ \Pi_{NC}= \dfrac{a^2}{9b},$$
+
+lo máximo que gana la firma 2 por desviarse es:
+
+$$ \Pi_D + \sum_{t=t+1}^{\infty}\delta^{T-t}\Pi_{NC} $$
+
+si la firma 2 no se desvía gana
+
+$$\sum_{T=t}^{\infty}\delta^{T-t}\Pi_C .$$
+
+Si se tiene que
+
+$$ \Pi_D + \sum_{t=t+1}^{\infty}\delta^{T-t}\Pi_{NC} \geq \sum_{T=t}^{\infty}\delta^{T-t}\Pi_C $$
+
+Si la desigualdad se cumple, la firma 2 no se desvía en $t$ y sigue cooperando (juega estrategia de gatillo). En ese caso jugar estrategias de gatillo es equilibrio de Nash en los dos tipos tipos de subjuegos. \textit{¿Qué necesito para que esto ocurra?}
+
+
 \chapter{Ejercicios}
 
 \section{Primera lista de ejercicios}
