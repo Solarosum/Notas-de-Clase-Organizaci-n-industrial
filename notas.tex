@@ -1193,6 +1193,99 @@ $$ \Pi_D + \sum_{t=t+1}^{\infty}\delta^{T-t}\Pi_{NC} \geq \sum_{T=t}^{\infty}\de
 
 Si la desigualdad se cumple, la firma 2 no se desvía en $t$ y sigue cooperando (juega estrategia de gatillo). En ese caso jugar estrategias de gatillo es equilibrio de Nash en los dos tipos tipos de subjuegos. \textit{¿Qué necesito para que esto ocurra?}
 
+\section{Clase del 2 de octubre}
+
+\subsection*{Colusión en el ologopolio de Bertrand}
+
+Suponga que la \textit{firma $2$} está jugando su estrategia de gatillo y que la \textit{firma $1$} elige el precio $p^M$ en todos los periodos anteriores a $t$. La mejor desviación posible para la \textit{firma $1$} es $P^M-\epsilon$ y ganar $\Pi^D$ en $t$, en los siguientes periodos jugara $P_1=c$. Para que la colusión sea sostenible como equilibrio, esta desviación debe ser menos rentable que mantenerse cooperando.
+
+Siendo los beneficios de la forma
+
+$$ \Pi_D + \sum^{\infty}_{\tau =t+1}\Pi_{NC} \leq \sum^{\infty}_{\tau=t}\delta^{\tau-t}\Pi_C,$$
+
+para un $\delta\geq \frac{1}{2}$, la colusión (equilibrio en estrategias de gatillo) es equilibrio perfecto en subjuegos si y solo si $\delta\geq \frac{1}{2}$, las firmas se coluden si son suficientemente pacientes.
+
+\subsection*{Determinantes de Colusión}
+
+\subsubsection*{Número de Firmas}
+
+Suponga que hay $N$ firmas compitiendo á la Bertrand, el beneficio de cada firma por coludirse es $\frac{\Pi^M}{N}$, el beneficio de desviarse es $\Pi^M$ (después del periodo en que me desvío es cero). Teniendo en cuenta que 
+
+$$ \Pi_D + \sum^{\infty}_{\tau =t+1}\Pi_{NC} \leq \sum^{\infty}_{\tau=t}\delta^{\tau-t}\Pi_C,$$
+
+se sigue que
+
+$$ \Pi^M \leq \sum^{\infty}_{\tau=t}\delta^{\tau-t}\frac{\Pi^M}{N},$$
+
+para un $\delta\geq\frac{N-1}{N}$, el $\delta^*$ que hace sostenible la colusión es creciente en el número de firmas. 
+
+El \textuparrow $N$ reduce los beneficios de coludirse, aumentando los incentivos a desviarse.
+
+Alcanzar un acuerdo colusivo es más complicado si hay más participantes.
+
+La probabilidad de que la autoridad detecte una asociación colusiva aumenta con más participantes.
+
+\subsubsection*{Crecimiento de mercado}
+
+Regresamos al caso de Bertrand con dos firmas: supongamos ahora que la demanda al tiempo $t$ es: $Q_t(P)=A^tQ(P)$ con $A>0$. 
+
+Los beneficios por desviarse son: $\Pi_D(t)=A^t\Pi^M$, los beneficios no cooperativos son $\Pi_{NC}=0$, la condición de no desviación es: 
+
+$$ \Pi^M + \sum_{\tau=t+1}^{\infty}\delta^{\tau-t}\Pi_{NC}\leq \sum_{\tau=t}^{\infty}\delta^{\tau-t}A^{\tau-t}\frac{\Pi^M}{2} $$
+
+considerando un $\delta \geq \frac{1}{2A}$. La colusión es más facil en un mercado en expansión que en uno que se contrae.
+
+
+\section{Clase del 3 de octubre}
+
+\subsection*{Número de cambios de precio al año}
+
+Ahora suponga que las firmas cambian sus precios $f$ veces al año, el periodo de tiempo es $\frac{1}{f}$ del año.
+
+Suponemos que $\delta = \frac{1}{1+r}$, en este caso:
+
+$$\delta = \frac{1}{1+\frac{r^y}{f}}$$
+
+En el modelo de Bertrand con dos firmas la colusión solo es factible si $\delta\geq\frac{1}{2},$ esto ocurre syss:
+
+$$\dfrac{1}{1+\frac{r^y}{f}}\geq \dfrac{1}{2}$$
+
+Despejando $f$ de la desigualdad se tiene que $f\geq r^y$, se concluye que la colusión es más fácil cuando se ajustan los precios con frecuencia. Cuando las firmas interactúan con frecuencia pueden detectar las desviaciones del acuerdo colusivo rápidamente.
+
+\subsection*{Recortes inobservables de Precios}
+
+Cuando las firmas están imperfectamente informadas de los precios rivales, la colusión es más complicada, una firma que se desvía podría no ser castigada si los rivales no observaron la disociación.
+
+\subsection*{Soluciones para facilitar la colusión}
+
+\textbf{Igualamos el precio de la competencia:} Los consumidores pueden pedir reembolsos si el rival tiene mejores precios (Consumidores monitorizan el cumplimiento del acuerdo colusivo)
+
+\textbf{Consumidor más beneficiado:} Consumidores Pasados pueden pedir reembolsos si bajas el precio (Reduce el incentivo a bajar precios)
+
+\begin{tcolorbox}[title= Ejemplo]
+	En alguna ocasión el gobierno de Dinamarca decidió publicar precios de transacción de compra de concreto entre agentes, facilitando la colusión, el precio subió un $20\%$ ese año y dejó de publicar precios.
+\end{tcolorbox}
+
+\subsection*{Colusión con firmas asimétricas}
+
+Suponga que las \textit{firmas 1 y 2} tienen gastos asimétricos $c_1=c<\bar{c}= c_2$ puede mostrarse que si $\delta \leq \frac{1}{2}$ existen equilibrios colusivos con características:
+
+$$ P \in [P^M(c),P^M(\bar{c})] $$
+
+con market shares $S_i>0$ para $i=1,2$.
+
+\textbf{Problemas:} No hay una forma simple de elegir entre equilibrios, es más dificil elegir entre el precio colusivo y la segmentación de mercado, hay incentivos para que las firmas mientan en sus costos marginales, las firmas no satisfechas pueden iniciar guerras de precios. El resultado de maximización de beneficios conjunta no es equilibrio perfecto en subjuegos. 
+
+\textbf{Soluciones:} Sobornos
+
+\begin{itemize}
+	\item Firma 1 oferta a todo el mercado a $ P^M(c) $
+	\item Firma 2 elige $P \rightarrow \infty$
+\end{itemize}
+
+Siempre que la firma 2 no esté en el mercado, la firma 1 la soborna. Problema: ¿a cuánto debe ascender el soborno? ¿Cómo ocultarlo?
+
+Por lo que la colusión es más difícil con firmas asimétricas.
 
 \chapter{Ejercicios}
 
