@@ -1193,6 +1193,64 @@ $$ \Pi_D + \sum_{t=t+1}^{\infty}\delta^{T-t}\Pi_{NC} \geq \sum_{T=t}^{\infty}\de
 
 Si la desigualdad se cumple, la firma 2 no se desvía en $t$ y sigue cooperando (juega estrategia de gatillo). En ese caso jugar estrategias de gatillo es equilibrio de Nash en los dos tipos tipos de subjuegos. \textit{¿Qué necesito para que esto ocurra?}
 
+\section{Clase del 30 de Septiembre}
+
+\subsection*{Colusión en el oligopolio de Cournot infinito}
+
+En clases pasadas nos preguntábamos si es que ambas firmas jugaran sus estrategias de gatillo era uno de los posibles equilibrios perfectos en subjuegos de Cournot repetido infinitamente. Si este fuera el caso, la colusión sería sostenible.
+
+Nos encontramos estudiando dos tipos de subjuegos:
+
+\textbf{Tipo $1$:} Alguien había traicionado en la historia previa (encontramos que para ambas firmas era óptimo jugar sus estrategias de gatillo).
+
+\textbf{Tipo $2$:} Nadie había traicionado en la historia previa (buscabamos el $\delta^*$ que haría óptimo jugar estrategias de gatillo comparando los beneficios descontados de traicionar y no traicionar).
+
+La \textit{firma 2} no quiere desviarse syss:
+
+$$ \Pi_D + \sum_{\tau=t+1}^{\infty}\delta^{\tau-t}\Pi_{NC}\leq\sum_{\tau=t}^{\infty}\delta^{\tau-t}\Pi_C $$
+
+en el lado izquierdo siendo los beneficios de traicionar en t (no jugar estrategias de gatillo en subjuegos tipo 2) y a la derecha los beneficios de no traicionar o desviarse (Jugar estrategias de gatillo en subjuegos tipo 2).
+
+El factor de descuento que hace sostenible la colusión (hace que ambas firmas jueguen sus estrategias de gatillo en ambos tipos de juegos) es:
+
+$$ \delta\geq \dfrac{9}{17} = \delta^* $$
+
+esto siendo el factor crítico de descuento. Si las firmas son suficientemente pacientes, la colusión es factible en el oligopolio de Cournot repetido infinitas veces. De forma intuitiva, cuando las firmas deciden si desviarse del acuerdo colusivo enfrentan el siguiente trade-off:
+
+\begin{itemize}
+	\item Desviarse hoy permite capturar más beneficios a corto plazo.
+	\item Pero esto genera un castigo infinito mañana, si las firmas le dan alta importancia al futuro (alta $\delta$), el segundo efecto domina y la colusión se obliga a ocurrir.
+	\item Un parámetro facilita la corrupción disminuye $\delta^*$
+\end{itemize}
+
+\subsection*{Colusión en el oligopolio de Bertrand infinito}
+
+Supongamos ahora que las firmas compiten en precios sea $Q(P)$ la demanda total. Considere el juego en una etapa, ¿cuál es el mejor resultado cooperativo?
+
+Jugar $P=P^M$, donde $P^M$ resuelve:
+
+$$ \text{arg. max} (P-C)Q(P),$$
+
+cada firma gana $\frac{\Pi^M}{2}$, con:
+
+$$ \Pi^M = (P^M-C)Q(P^M).$$
+
+Si una firma se desvía del resultado cooperativo, ¿cuántos beneficios gana?
+
+\begin{itemize}
+	\item Mejor desviación:
+	\begin{itemize}
+		\item $P=P^M-\epsilon$
+		\item $\Pi_D= \Pi^M$
+	\end{itemize}
+	\item ¿Cuál es el resultado no cooperativo?
+	\begin{itemize}
+		\item $P_M=MC=C$
+		\item $\Pi_{NC}=0$
+	\end{itemize}
+\end{itemize}
+
+
 \section{Clase del 2 de octubre}
 
 \subsection*{Colusión en el ologopolio de Bertrand}
