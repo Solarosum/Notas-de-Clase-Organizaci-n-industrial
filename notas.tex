@@ -1345,9 +1345,99 @@ Siempre que la firma 2 no esté en el mercado, la firma 1 la soborna. Problema: 
 
 Por lo que la colusión es más difícil con firmas asimétricas.
 
+\section{Clase del 7 de Octubre}
+
+
+\subsection*{Colusión y contratos multimercado}
+
+Considere dos mercados: A y B. 
+\begin{itemize}
+	\item $ Q_A(P_A)=Q(P_A)$
+	\item $Q_B(P_B)=Q(P_B)$
+	\item Mercado A: $C_1^{A}=c<\bar{c}=c_2^A$
+	\item Mercado B: $C_2^{B}=c<\bar{c}=c_1^B$
+\end{itemize}
+
+Sin contratos multimercado (suponiendo que B no existe), las firmas $1$ y $2$ tendrían problemas en alcanzar un acuerdo colusivo.
+
+Para contratos multimercado, consideremos las siguientes estrategias de gatillo:
+
+Si $t=0$, $P_1^A(t)=P^M(c)$ y $P_1^B(t)= \infty$ si $t>1$. 
+
+Si para todo $\tau <t$, 
+
+\begin{itemize}
+	\item $P_1^A(\tau)=P_2^B= P^M(c)$ y \\ $P_1^B(\tau)=P_2^A= \infty$
+	\item $P_1^A(\tau)= P^M(c)$ y \\ $P_1^B(\tau)=P_2^A= \infty$
+\end{itemize}
+
+En otro caso $P_1^A(t)=c$ y $P_1^B(t)= c + \epsilon$. Es la estrategia simétrica para la firma 2.
+
+Es directo probar que estas estrategias de gatillo forman un equilibrio perfecto en si y solo si $\delta>\frac{1}{2}$. El resultado de maximización de beneficios conjunta puede ser sostenido najo contratos multimercado. En equilibrio, la firma $1$ oferta el mercado A a su precio de monopolio y la firma $2$ oferta al mercado B a su precio de monopolio.
+
+Los contratos multimercado aplanan las asimetrías entre las firmas y facilitan la colusión.
+
+\subsection*{Guerra de precios}
+
+Hasta el momento, las guerras de precios nunca ocurren:
+
+\begin{itemize}
+	\item O las firmas no se coluden y $P=MC$ por siempre
+	\item O las firmas se coluden y el precio permanece siempre en el nivel colusivo.
+\end{itemize}
+
+En los modelos, las guerra de precios son un fenómeno fuera del equilibrio, la amenaza de una guerra de precios obliga la colusión a ocurrir.
+
+Pero las guerras de precio ocurren en la realidad, ¿Por qué?
+
+\begin{itemize}
+	\item \textbf{Shocks no anticipados:} Nuevo competidor, nueva información sobre el futuro.
+	\item \textbf{Shocks de liquidez:} Empresas con problemas financieros podrían necesitar hacer muchos beneficios en el corto plazo.
+\end{itemize}
+
+\textbf{Modelo:} Suponga que el factor de descuento de las firmas con problemas financieros decrece después del \textit{shock} de liquidez. La firma podría iniciar una guerra de precios. Firmas con problemas financieros (Alto $\frac{\text{equity}}{\text{debé}}$)
+
+Las guerras de precios permiten a algunas firmas ganar batallas de distribución entre los miembros del cartel.
+
+Con información asimétrica las firmas podrían comportarse de forma en que lastimen a sus beneficios y a los de sus competidores para ganar mercado.
+
+\subsection*{Recortes secretos de Precios y fluctuaciones de la demanda}
+
+Suponga que en cada periodo, la demanda está dada por:
+
+$$ D_t(P)= \begin{cases}
+	\dfrac{D(P)}{1-\mu} & \text{Con Prob: } 1-\mu\\ 
+	0 & \text{Con Prob: } \mu
+\end{cases} $$
+
+Si una firma vende $0$ puede ser por dos razones, un shock de demanda o una desviación del rival, si el shock no se observa, es imposible distinguir la causa. 
+
+Las firmas deciden $P$ antes de que ocurra el shock. El beneficio esperado de coludirse es:
+
+$$ \Pi^M= IE[(P^M-c)D_t(P^M)] ,$$
+
+$$ \Pi^M=(1-\mu)(P^M-c)\dfrac{D(P)}{1-\mu}+\mu \cdot 0,$$
+
+$$\Pi^M= (P^M-c)D(P),$$
+
+en cada $t$. Si las firmas observan al final de cada periodo si ocurrió o no el shock, sabemos que la colusión es sostenible syss $\delta \geq \frac{1}{2}$. Si las firmas no observan el shock:
+
+\begin{itemize}
+	\item Deben castigar cada vez que observan baja demanda, de otra forma, las firmas siempre harían trampa.
+	\item Pero el regreso a Bertrand infinito es muy radical, antes o después ocurriría un shock.
+\end{itemize}
+
+\textbf{Solución intermedia:} Guerra de precios por $\tau$ periodos y regresar al acuerdo colusivo, esto sería equilibrio perfecto en subjuegos si $\delta >\delta^*(\tau)$.
+
+Las guerras de precio son un fenómeno de equilibrio que permite disciplinar al mercado.
+
 \chapter{Ejercicios}
 
 \section{Primera lista de ejercicios}
+
+\subsection*{Ejercicio I}
+
+\section{Segunda lista de ejercicios}
 
 \subsection*{Ejercicio I}
 
