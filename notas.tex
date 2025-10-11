@@ -1431,6 +1431,85 @@ en cada $t$. Si las firmas observan al final de cada periodo si ocurrió o no el
 
 Las guerras de precio son un fenómeno de equilibrio que permite disciplinar al mercado.
 
+\section{Clase del 9 de Octubre}
+
+\subsection*{Guerras de Precios y Fluctuaciones Observables de la Demanda}
+
+En algunas circunstancias puede ser más realista suponer que las firmas observan los cambios en la demanda. 
+
+Suponga que cada periodo, la demanda total está dada por:
+
+$$ A_t \begin{cases}
+	1+\epsilon & \text{con Prob } =\dfrac{1}{2} \\
+	\\
+	1-\epsilon & \text{con Prob } =\dfrac{1}{2} \\
+	
+\end{cases} $$
+
+Primero suponga que $A_t$ es observable al inicio de cada periodo, antes de que las \textit{firmas} eligen precios. Supongamos que de inicio, las firmas intentan coludirse en el precio de monopolio $P^{M}$ en cada periodo ($A_t$ es multiplicativo, no afecta el precio de monopolio). Suponga que las firmas juegan sus estrategias de gatillo usuales.
+
+En cada periodo los beneficios esperados de la industria en colusión es:
+
+$$  E[\Pi] = \dfrac{1}{2}(1+\epsilon)\Pi^M + \dfrac{1}{2}(1-\epsilon)\Pi^M $$
+
+$$ \vdots $$
+
+$$ E[\Pi]=\Pi^M $$
+
+La condición de no desviación en los booms económicos es:
+
+\begin{itemize}
+	\item Beneficios de colusión: $$ \dfrac{1}{2} \sum_{\tau=t}^{\infty}\delta ^{\tau-t}\Pi^M(1+\epsilon) $$
+	
+	\item Beneficios de desviarme un periodo: $$ (1+\epsilon)\Pi^{M}+\sum_{\tau=t+1}^{ \infty} \delta^{\tau-t}\Pi^{NC} $$
+\end{itemize}
+
+con un $\delta \leq \frac{1}{2}$. La condición de no desviación en las recesiones es:
+
+\begin{itemize}
+	\item Beneficios de colusión: $$ \dfrac{1}{2} \sum_{\tau=t}^{\infty}\delta ^{\tau-t}\Pi^M(1-\epsilon) $$
+	
+	\item Beneficios de desviarme un periodo: $$ (1-\epsilon)\Pi^{M}+\sum_{\tau=t+1}^{ \infty} \delta^{\tau-t}\Pi^{NC} $$
+\end{itemize}
+
+con un $\delta \geq \frac{1}{2}$. La condición de no colusión el boom solo dura un periodo:
+
+\begin{itemize}
+	\item Beneficios de colusión: $$ \dfrac{1}{2}(1+\epsilon)\Pi^M+ \sum_{\tau=t}^{\infty}\delta ^{\tau-t}\Pi^M\dfrac{1}{\epsilon} $$
+	
+	\item Beneficios de desviarme un periodo: $$ (1+\epsilon)\Pi^{M}+\sum_{\tau=t+1}^{ \infty} \delta^{\tau-t}\Pi^{NC} $$
+\end{itemize}
+
+con un $\delta \geq \dfrac{1+\epsilon}{2+\epsilon}$. La condición de no desviación en cuando la recesión solo dura un periodo:
+
+
+\begin{itemize}
+	\item Beneficios de colusión: $$ \dfrac{1}{2}(1-\epsilon)\Pi^M+ \sum_{\tau=t}^{\infty}\delta ^{\tau-t}\Pi^M\dfrac{1}{\epsilon} $$
+	
+	\item Beneficios de desviarme un periodo: $$ (1-\epsilon)\Pi^{M}+\sum_{\tau=t+1}^{ \infty} \delta^{\tau-t}\Pi^{NC} $$
+\end{itemize}
+
+
+con $\delta\geq \dfrac{1-\epsilon}{2-\epsilon}$.
+
+\section{Clase del 10 de Octubre}
+
+Se sigue $\delta^{\text{Booms}}>\delta^{\text{Recesiones}}$ la colusión es más difícil de sostener en los periodos de boom económico.
+
+¿Qué ocurre si $\delta \in (\delta^{\text{Booms}},\delta^{\text{Recesiones}})$? El perfil de estrategias de gatillo no puede ser equilibrio.
+
+Suponga que $\frac{1}{2}<\delta < \delta^{\text{Booms}}$. La colusión no es posible en las estrategias de gatillo usuales. 
+
+Sea $\tilde{P}<P^{M}$ y $$(1+\epsilon)(\tilde{P}-C)Q(P)=(1-\epsilon)\Pi^M$$
+
+Considere la siguiente estrategia: Elegir $P^M$ en estados de bajo demanda y $\tilde{P}$ en estados de alta demanda. Elegir $P=C$ siempre si alguno se desvía de la regla de fijación de precios.
+
+Suponga que la demanda en el estado actual es alta y que su rival esta jugando la estrategia descrita antes, su firma no se quiere desviar si y solo si $\delta\geq \frac{1}{2}$.
+
+Cuando $\frac{1}{2}<\delta<\delta^{\text{Booms}}$, la colusión eficiente no es factible, las firmas tienen incentivos a desviarse en los \textit{Booms}. Para hacer las desviaciones en estados de alta demanda menos atractivos puede ser necesario acordar un precio colusivo menor en los \textit{booms}. El modelo predice que es probable observar guerras de precios durante los \textit{Booms}.
+
+
+
 \chapter{Ejercicios}
 
 \section{Primera lista de ejercicios}
