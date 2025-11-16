@@ -865,7 +865,7 @@ debe ser el caso que $P_i$:
 
 $$P_j^2\leq U-\sigma \leq c, $$
 
-si los costos por cambiar de producir son altos, no es rentable para la firma $i$ ganar market share en $t=2$. Ambas firmas se concentran en sus consumidores y cobran $P_i² = U.$ Los beneficios son
+si los costos por cambiar de producir son altos, no es rentable para la firma $i$ ganar market share en $t=2$. Ambas firmas se concentran en sus consumidores y cobran $P_i = U.$ Los beneficios son
 
 $$\Pi_i=(U-c)s_i$$
 
@@ -1509,6 +1509,311 @@ Suponga que la demanda en el estado actual es alta y que su rival esta jugando l
 Cuando $\frac{1}{2}<\delta<\delta^{\text{Booms}}$, la colusión eficiente no es factible, las firmas tienen incentivos a desviarse en los \textit{Booms}. Para hacer las desviaciones en estados de alta demanda menos atractivos puede ser necesario acordar un precio colusivo menor en los \textit{booms}. El modelo predice que es probable observar guerras de precios durante los \textit{Booms}.
 
 
+
+\chapter{Segunda Parte}
+
+\section{Clase del 28 de Octubre}
+
+\subsection*{Diferenciación de Productos}
+
+Eliminamos el supuesto de productos homogeneos, los productos diferenciados son similares, pero no idénticos.
+
+\begin{itemize}
+	\item \textbf{Diferenciación vertical:} Si todos los productos tuvieran el mismo precio, los consumidores estarían de acuerdo en el ranking de preferencias de productos, pero en desacuerdo en su disposición  a pagar.
+	
+	\item \textbf{Diferenciación horizontal:} Si todos los productos tuvieran el mismo precio, los consumidores estarían en desacuerdosobre que producto elegir.
+\end{itemize}
+
+Piense en un productos como un conjunto de atributos, algunos horizontales (colores) y otros verticales (caballos de fuerza).
+
+\subsection*{Modelos Especiales de Diferenciación de Precios}
+
+Modelo de competencia de Bertrand entre firmas diferenciadas. Hotelling Linear City (1929).
+
+\subsubsection*{Supuestos}
+
+\begin{itemize}
+		\item Ciudad unidimensional que tiene largo $[0,1]$
+		\item Masa de consumidores $M>0$ distribuidos uniformemente en $[0,1]$ (Por cada $0\leq a \leq b \leq 1$ hay $M(b-a)$ consumidores entre $a$ y $b$)
+		\item Hay dos firmas, por ejemplo cafés, la firma $I$ está en $x=0$, la firma $r$ en $x=1$.
+		
+		\item Los consumidores tienen demanda unitaria (o compran a $I$ ó compran a $r$ ó no compran)
+		
+		\item Si el consumidor no consume recibe utilidad cero
+		
+		\item Un consumidor que compra a $i \in \{I,r\}$ recibe: 
+		
+		$$ U=U-t\cdot \text{Distancia a la firma }i - P_i$$
+		
+		siendo $t$ el costo de transporte, mide que tanto le disgusta caminar.
+\end{itemize}
+
+Fijemos la ubucación de un consumidor $x\in [0,1]$, la utilidad del consumidor que se ubica en $x$:
+
+$$
+U(x)= \begin{cases}
+	U-tx-P_I & \text{Si compra en }I\\
+	U-t(1-x)-P_r & \text{Si compra en }r \\
+	0 & \text{si no compra}
+\end{cases}
+$$
+
+\subsubsection*{¿El modelo captura diferenciación horizontal?}
+
+Considere un consumidor que vive en $x=0$ y suponga que los son los mismos $P_I=P_r=P$, la utilidad de consumir en:
+
+\begin{itemize}
+	\item Firma izquierda: $U-p$
+	\item Firma derecha: $U_t-p$
+\end{itemize}
+
+el consumidor prefiere consumir en la firma $I$. Si el consumidor se ubicara en $x=1$, el consumidor prefiere consumir en la firma $r$.
+
+Los consumidores están en desacuerdo en su producto preferido. El consumidor $x$ maximiza su utilidad:
+
+$$ max(U-P_I-tx,U-P_r-t(1-x),0), $$
+
+el consumidor no siempre prefiere ir a la firma más barata, depende de la distancia relativa $x$ contra $1-x$. Supongamos que los precios son suficientemente bajos, todos compran el bien. Encuentre la ubicación del consumidor marginal. Tengamos que 
+
+$$ U-P_I-tx = U-P_r-t(1-x) $$
+
+se tiene que 
+
+$$ x^*= \dfrac{1}{2t}(P_r-P_I)+\dfrac{1}{2}. $$
+
+Todos los que están a la izquierda de $x^{*}$ están estrictamente mejor comprando a la firma $I$, los que están a la derecha de $x^*$ están mejor comprando a la firma $r$. Las demandas están dadas por:
+
+\begin{itemize}
+	\item $Q_I= Mx^*$
+	\item $Q_r=M(1-x^*)$
+\end{itemize}
+
+\subsubsection*{Consecuencias}
+
+\begin{itemize}
+	\item Si $P_I>P_r,Q_I\neq0$ (diferente a Bertrand con bienes homogeneos).
+	\item Las demandastienen pendiente descendente en el precio de la propia firma y positiva en el precio de los consumidores.
+	\item El modelo se puede resolver para más de una dimensión y para cuando las firmas no están en las esquinas.
+	\item En lugar de una ciudad podriamos pensar en nuestras preferencias, la ubicación de sus gustos y los productos en el espacio de productos.
+\end{itemize}
+
+
+\section{Clase del 30 de Octubre}
+
+\subsubsection*{Regresemos al modelo de Hotelling, pero ahora con tres formas}
+
+\begin{tcolorbox}[title=Firmas]
+	
+	\begin{itemize}
+		\item \textbf{Firma 1 en:} $x=0$
+		\item \textbf{Firma 2 en:} $x=\frac{1}{5}$
+		\item \textbf{Firma 3 en:} $x=1$
+	\end{itemize}
+	
+\end{tcolorbox}
+
+Suponiendo que la firma 2 tiene una demanda positiva, ningún consumidor elige entre las firmas 2 y 3 (siempre y cuando, los precios no sean muy diferentes)
+
+\subsubsection*{¿Dónde se ubica el consumidor indiferente entre 1 y 2?}
+
+Consideremos
+
+$$  U= \begin{cases}
+	U-tx-P_1 & \text{Si compra en }1\\
+	U-t|\frac{1}{5}-x|-P_2 & \text{Si compra en }2 \\
+	U-t(1-x)-P_3 & \text{Si compra en }3 \\
+	0 & \text{si no compra}
+\end{cases}  $$
+
+el consumidor se encuentra en 
+
+$$  x^{\flat}_{1,2} =  \dfrac{1}{10} + \dfrac{1}{2t}(P_2-P_1)$$
+
+\subsubsection*{¿Dónde se ubica el consumidor indiferente entre 2 y 3?}
+
+el consumidor se encuentra en 
+
+$$  x^{\flat}_{2,3} = \dfrac{3}{5} + \dfrac{1}{2t}(P_3-P_2).$$
+
+\subsubsection*{Siendo las demandas}
+
+Todos a la derecha de $x_{2,3}$ consumen de la firma 3.
+
+$$ Q_3 = M(1-x^{\flat}_{2,3})$$
+
+$$Q_3 = M[\dfrac{2}{5}-\dfrac{1}{2t}(P_3-P_2)]$$
+
+Todos entre $x_{1,2}$ y $x_{2,3}$ consumen de la firma 2.
+
+$$ Q_2 = M(x^{\flat}_{2,3}-x^{\flat}_{1,2})$$
+
+$$ Q_2= \dfrac{M}{2}[1+t(P_3-2P_2+P_1)]$$
+
+Todos a la izquierda de $x_{1,2}$ consumen de la firma 1.
+
+$$ Q_1 = M[\dfrac{1}{10} + \dfrac{1}{2t}(P_2-P_1)] $$	
+
+\subsubsection*{Conclusiones}
+
+\begin{itemize}
+	\item La demanda de cada firma decrece en su precio y crece en el precio de los competidores.
+	\item La demanda de la firma 2 no depende del precio de la firma 3.
+	\item La firma 2 es la única cuya demanda depende de los precios del precio de las otras dos firmas.
+	\item Las firmas con productos en regiones muy ocupados de espacio de productos enfrentran curvas de demanda residual más planas, tienen menos poder de mercado, menos mark-up's y menos beneficios.
+\end{itemize}
+
+
+\section{Clase del 6 de Noviembre}
+
+Ahora considere un equilibrio de Nash simétrico en el que el mercado está cubierto (todos compran) y el consumidor marginal tiene excedente cero.
+
+Considere que la firma 1 (izquierda) fija un precio en la vecindad de $P^{*}$ y la firma 2 (derecha) fija precio $P^{*}$.
+
+\textbf{¿Cómo se ven las demandas?:}
+
+$$  Q_1 = \begin{cases}
+	\dfrac{1}{2}+\dfrac{1}{2t}(P^*-P_1) & \text{Si} P_1<P^* \\ \\
+	\dfrac{U P_1}{t} & \text{Si } P_1 \geq P^{*}
+\end{cases}$$
+
+La función de beneficios esta dada
+por 
+
+\[  \Pi_1 = \begin{cases}
+	(P_1-c)[\dfrac{1}{2}+\dfrac{1}{2t}(P^*-P_1)] & \text{Si} P_1<P^* \\ \\
+	(P_1-c)\dfrac{U P_1}{t} & \text{Si } P_1 \geq P^{*}
+\end{cases} \]
+
+¿Bajo qué condiciones $P^*$ es un máximo local de $\Pi_1(\cdot,P^*)$? Se tiene que 
+
+$$ P_1 = \frac{1}{2}t+\dfrac{1}{2}(P^*+c)$$
+
+Pra que $P^*$ sea máximo debe ocurrir que $\lim_{P_1 \to P^{*-}}\frac{\partial \Pi_1}{\partial P_1} \geq 0$. Siendo que 
+
+$$ \dfrac{P^*-c}{2t} \leq \dfrac{1}{2} $$
+
+Para que $P^*$ sea máximo debe ocurrir que $\lim_{P_1 \to P^{*-} \frac{\partial \Pi_1}{\partial P_1} }$. Siendo esto
+
+$$ \dfrac{2P^*}{t}+\dfrac{c}{t} \leq \dfrac{U}{t}$$
+
+La demanda de la firma 1 si elige $P^*$ es $Q_1=\frac{1}{2}$, se sigue que 
+
+$$  -\dfrac{P^{*}-c}{t} + \dfrac{1}{2} \leq 0 $$
+
+La función $\Pi_1$, es estrictamente cóncava para $P_1<P^*$ y $P_1>P^*$, lo que implica que cualquier máximo local es un máximo global. Para la firma 1, elegir $P^{*}$ cuando la firma 2 elige $P^*$ es su mejor respuesta si y solo si:
+
+$$ \frac{t}{2} \leq P^{*}-c \leq t $$
+
+\section{Clase del 11 de Noviembre}
+
+\subsection*{Hotelling con dos firmas y consumidor marginal con excedente cero (Parte 2)}
+
+Cerramos la clase pasada con que es la mejor respuesta para la firma 1 elegir $P^{*}$ cuando la firma 2 elige $P^{*}$ si y solo si:
+
+\[ \frac{t}{2}\leq P^* - c \leq t \]
+
+Buscamos el equilibrio simétrico en el que el consumidor marginal tiene excedente cero:
+
+\[ V-P^*-\frac{1}{2}=0\]
+
+\[P^* = V-\frac{1}{2}\]
+
+Sustituyendo en la desigualdades anteriores concluimos que ese equilibrio existe syss:
+
+\[ c+t \leq V \leq c + \frac{3}{2}t \]
+
+Los beneficios de ambas firmas son:
+
+\[\Pi_i = \frac{1}{2}(V-\frac{t}{2}-c)\]
+
+Finalmente, buscamos un equilibrio en el que ek mercado no se cobre, en este caso la demanda de la firma 1 es independiente del precio de la firma juega
+
+\[ q_i = \dfrac{V-P_j}{t} \]
+
+la maximización de beneficios implica que: 
+
+\[ -\dfrac{P_i-c}{t}+\dfrac{V-P_i}{t} = 0 \]
+
+\[ P_i = \dfrac{V+c}{2} \]
+
+cada firma oferta \( \frac{V-c}{2t} \). El mercado no se cobre:
+
+\[ \dfrac{V-C}{2t} < \dfrac{1}{2} \leftrightarrow V< c+t \]
+
+Si la desigualdad ocurre hay un equilibrio hay un equilibrio de Nash único con mercado no cubierto y ambas firmas ganan \( \frac{(V-C)^2}{4t} \).
+
+\subsection*{Resumen}
+
+\begin{itemize}
+	\item Si \( V > \frac{3t}{2} + t \) el mercado se cubre y todos los consumidores tienen excedente positivo gracias a la competencia, los beneficios de las firmas son decrecientes en el costo de transporte.
+	\item Si \( V< c+t  \) el mercado no se cubre y las firmas son monopolios locales. Los beneficios de las firmas son decrecientes en los costos de transporte.
+	\item Si \(\uparrow t \) es más dificil llegar a consumidores lejanos si \(t\) no es grande es bueno, suaviza la competencia. Si \(t\) es grande las firmas bajan \(p\) para no perder consumidores.
+\end{itemize}
+
+\subsection*{Hotelling con elección de ubicación y costos cuadráticos}
+
+Suponga que ahora las firmas pueden elegir su ubicación. Las firmas también compiten en el espacio de productos. Suponga costos cuadráticos:
+
+Si un consumidor elige un producto a una distancia \( y \) de él paga \( tx^2 \). Tiempos:
+
+\begin{itemize}
+	\item \(t = 1\), las firmas deciden donde ubicarse \( (a,b) \) donde \(a,b \in [0,1]\).
+	\item \( t = 2 \), firmas eligen precios \( (P_A,P_B) \).
+\end{itemize}
+
+Buscamos equilibrio perfecto en subjuegos. 
+
+Supongamos \( a < b \)
+
+\[ V = \begin{cases}
+	U-P_A-t(x-a)^2 & \text{para la firma }a \\
+	U-P_B-t(x-b)^2 & \text{para la firma }b
+\end{cases} \]
+
+Para obtener el consumidor marginal se supone que todos los consumidores consumen de tal forma que 
+
+\[ U-P_A-t(x-a)^2 = U - P_B- t(x-b)^2\]
+
+\[vdots\]
+
+\[ x = \dfrac{P_B-P_A}{2t(b-a)}+\dfrac{a+b}{2} \]
+
+Ahora podemos calcular las demandas de las firmas \(A\) y \(B\):
+
+\begin{itemize}
+	\item \(q_A = \hat{x} = \dfrac{P_B-P_A}{2t(b-a)} + \dfrac{a+b}{2} \)
+	\item \( q_B = 1-\hat{x} = 1 - \left(\dfrac{P_B-P_A}{2t(b-a)}\right) + \dfrac{a+b}{2} \)
+\end{itemize}
+
+Ahora encontramos las funciones de beneficios suponiendo costo marginal cero:
+
+
+\section{Clase del 14 de Noviembre}
+
+Resolvimos en la clase anterior los precios en \(t = 2 \) y encontramos:
+
+\begin{itemize}
+	\item \( P_A(a,b) = t(b-a)\dfrac{a+b+2}{3} \)
+	\item \(  P_B(a,b) = t(b-a)\dfrac{4-(a+b)}{3}  \)
+\end{itemize}
+
+Ahora volvemos a la etapa 1:
+
+\[ \Pi_A(a,b) = \Pi_a(P_A(a,b),P_B(a,b)a,b) \]
+
+obteniendo la derivada
+
+\[  \dfrac{\partial\Pi_A}{\partial a} = \dfrac{\partial\Pi_a}{\partial P_B}\cdot\dfrac{\partial P_B(a,b)}{\partial a} + \dfrac{\partial \Pi_a}{\partial a} \]
+
+considerando
+
+\[  \Pi_A = P_A\left(\dfrac{a+b}{2} + \dfrac{P_B-P_A}{2t(b-a)}\right)  \]
+
+tengamos
+
+\[  \dfrac{\partial \Pi_A}{\partial a} = P_A \left( \dfrac{\partial q_A}{\partial P_B} \cdot \dfrac{\partial P_B}{\partial a} + \dfrac{\partial q_A}{\partial a} \right)  \]
+
+\[ \vdots \]
 
 \chapter{Ejercicios}
 
